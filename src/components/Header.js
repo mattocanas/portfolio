@@ -1,26 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Styles from './styles/Header.css';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav'
 
 const Header = () => {
     return (
-        <div className="ui secondary pointing menu">
-            <Link className="item custom-item" to='/'>
-                home
-            </Link>
-            <Link className="item custom-item" to='/about'>
-                about me
-            </Link>
-            <Link className="item custom-item" to='/finishedprojects'>
-                finished projects
-            </Link>
-            <Link className="item custom-item" to='/currentprojects'>
-                in progress
-            </Link>
-            <Link className="item custom-item" to='/contact'>
-                contact me
-            </Link>
-        </div>
+        <>
+            <Navbar className="justify-content-end" bg="light" variant="light">
+            <Nav>
+                <Nav.Item>
+                    <Nav.Link href="/">about</Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item>
+                    <Nav.Link href="/projects">projects</Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item>
+                    <Nav.Link href="/contact">contact</Nav.Link>
+                </Nav.Item>
+            </Nav>
+            </Navbar>
+        </>
     );
 };
 
